@@ -14,8 +14,8 @@
 
     function  calculateShapeArea(shape:Shape):number|undefined{
         if( shape.shape === 'circle'&& typeof shape.radius === 'number'){
-            const ans = Math.PI * shape.radius * shape.radius
-            return ans;
+           let ans = Math.PI * shape.radius * shape.radius
+            return parseFloat(ans.toFixed(2));
             
         }
         else if(shape.shape === 'rectangle' && typeof shape.width === 'number' &&
@@ -27,7 +27,7 @@
       
     }
 
-   // console.log(calculateShapeArea({ shape: "circle", radius: 5 }))
+   //console.log(calculateShapeArea({ shape: "circle", radius: 5 }))
    console.log(calculateShapeArea({
     shape: "rectangle",
     width: 4,
